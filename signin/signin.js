@@ -1,5 +1,5 @@
 /*
-  In this exercise we will Sign In on Facebook with Puppeteer
+  In this exercise we will Sign In on Pinterest with Puppeteer
 */
 const puppeteer = require('puppeteer');
 
@@ -18,7 +18,7 @@ const main = async () => {
   await page.type('input#email', SECRET_EMAIL); // Insert email on email input
   await page.type('input#password', SECRET_PASSWORD); // Insert password on password input
   await page.click('.SignupButton '); // Clicks on login button
-  // await browser.close();
+  // await browser.close(); // this is commented for us to see the page opening and typing
 }
 
 main();
