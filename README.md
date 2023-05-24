@@ -40,7 +40,9 @@ If you want, clone or download this repository:
 $ git clone git@github.com:williamalonso/puppeteer.git
 ```
 
-To run the app, give It the command `npm name_file`.
+After downloading or cloning the project, run the command `npm i`.
+
+To run the app, go to the specifc directory and give It the command `npm name_file`.
 
 <h3 align="center">William Alonso</h3>
 
