@@ -42,7 +42,7 @@ $ git clone git@github.com:williamalonso/puppeteer.git
 
 After downloading or cloning the project, run the command `npm i`.
 
-To run the app, go to the specifc directory and give It the command `npm name_file`.
+To run the app, go to the specifc directory and give It the command `node name_file.js`.
 
 <h3 align="center">William Alonso</h3>
 
