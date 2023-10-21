@@ -23,9 +23,10 @@ This project was developed with the bellow techs:
 
 ### ✨ About It's construction:
 
-- We convert a webpage to pdf;
-- We screenshot a webpage;
-- We try to sign in a webpage;
+- 01: We convert a webpage to pdf;
+- 02: We screenshot a webpage;
+- 03: We try to sign in a webpage;
+- 04: We extract data from a page based on a word;
 
 ---
 
