@@ -8,7 +8,7 @@ const main = async () => {
     headless: false,
   });
   const page = await browser.newPage();
-  await page.goto('https://dev.binario.cloud/produtos/compute', {
+  await page.goto('http://127.0.0.1:8000/produtos/compute', {
     waitUntil: 'networkidle2'
   });
   
