@@ -8,7 +8,7 @@ const main = async () => {
     headless: false,
   });
   const page = await browser.newPage();
-  await page.goto('http://127.0.0.1:8000/produtos/compute', {
+  await page.goto('https://binario.cloud/produtos/storage/object-storage', {
     waitUntil: 'networkidle2'
   });
   
@@ -18,10 +18,15 @@ const main = async () => {
   const frame = await frameHandle.contentFrame();
   await frame.waitForSelector('.recaptcha-checkbox-checkmark');
   
-  await page.type('#rd-text_field-lj4kwjr5', 'teste');
-  await page.type('#rd-email_field-lj4kwjr6', 'teste@mail.com');
-  await page.type('#rd-phone_field-lj4kwjr7', '+55 (61) 98157-1069');
-  await page.type('#rd-text_field-lj4kwjr8', 'Binario');
+  // await page.type('#rd-text_field-lj4kwjr5', 'teste');
+  // await page.type('#rd-email_field-lj4kwjr6', 'teste@mail.com');
+  // await page.type('#rd-phone_field-lj4kwjr7', '+55 (61) 98157-1069');
+  // await page.type('#rd-text_field-lj4kwjr8', 'Binario');
+
+  await page.type('#rd-text_field-lj4kv7w9', 'teste');
+  await page.type('#rd-email_field-lj4kv7wa', 'teste@mail.com');
+  await page.type('#rd-phone_field-lj4kv7wb', '+55 (61) 98157-1069');
+  await page.type('#rd-text_field-lj4kv7wc', 'Binario');
 
   await frame.click('.recaptcha-checkbox-checkmark');
 }
