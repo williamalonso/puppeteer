@@ -110,28 +110,28 @@ const main = async () => {
     await page.waitForTimeout(4000);
 
     // Etapa 2: faz as pesquisas
-    // const phrases = getRandomPhrases();
-    // for (const phrase of phrases) {
-    //     try {
-    //         console.log(`Pesquisando: ${phrase}`);
+    const phrases = getRandomPhrases();
+    for (const phrase of phrases) {
+        try {
+            console.log(`Pesquisando: ${phrase}`);
 
-    //         await page.waitForSelector('#sb_form_q', { visible: true });
+            await page.waitForSelector('#sb_form_q', { visible: true });
 
-    //         // Limpa o campo antes de digitar a nova frase
-    //         await page.evaluate(() => document.querySelector('#sb_form_q').value = "");
+            // Limpa o campo antes de digitar a nova frase
+            await page.evaluate(() => document.querySelector('#sb_form_q').value = "");
 
-    //         // Digita a frase no campo de pesquisa
-    //         await page.type('#sb_form_q', phrase, { delay: 100 });
+            // Digita a frase no campo de pesquisa
+            await page.type('#sb_form_q', phrase, { delay: 100 });
 
-    //         // Pressiona Enter para buscar
-    //         await page.keyboard.press('Enter');
+            // Pressiona Enter para buscar
+            await page.keyboard.press('Enter');
 
-    //         // Espera 4 segundos antes da próxima pesquisa
-    //         await page.waitForTimeout(4000);
-    //     } catch (e) {
-    //         console.log('Erro ao digitar a frase:', e);
-    //     }
-    // }
+            // Espera 4 segundos antes da próxima pesquisa
+            await page.waitForTimeout(4000);
+        } catch (e) {
+            console.log('Erro ao digitar a frase:', e);
+        }
+    }
     console.log("Pesquisas concluídas!");
 
     // Etapa 3: vai para a página de rewards
