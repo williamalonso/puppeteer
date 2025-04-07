@@ -83,14 +83,18 @@ const processRewardsCards = async (page) => {
     };
 
     const selector1 = 'mee-card.c-card.f-double a.ds-card-sec';
-    const selector2 = 'div[data-bi-id="Global_DailySet_20250407_Child2"] a.ds-card-sec';
-    const selector3 = 'div[data-bi-id="Global_DailySet_20250407_Child3"] a.ds-card-sec';
-    const selector4 = 'div[data-bi-id="PTstar_Rewards_DailyGlobalOffer_Evergreen_Monday"] a.ds-card-sec';
+    const selector2 = 'mee-card.f-double mee-rewards-daily-set-item-content a.ds-card-sec';
+    const selector3 = 'mee-card.f-single:nth-of-type(3) mee-rewards-daily-set-item-content a.ds-card-sec';
+    const selector4 = 'mee-card.f-single mee-rewards-more-activities-card-item a.ds-card-sec';
+    const selector5 = '#more-activities mee-card:nth-child(2) a.ds-card-sec';
+    const selector6 = '#more-activities mee-card:nth-child(3) a.ds-card-sec';
 
     await visitAndClick('Child1 (mee-card)', selector1);
     await visitAndClick('Child2 (data-bi-id)', selector2);
     await visitAndClick('Child3 (data-bi-id)', selector3);
-    await visitAndClick('Quote of the Day (card4)', selector4);
+    await visitAndClick('Chil4', selector4);
+    await visitAndClick('Child5', selector5);
+    await visitAndClick('Child6', selector6);
 };
 
   
@@ -110,28 +114,28 @@ const main = async () => {
     await page.waitForTimeout(4000);
 
     // Etapa 2: faz as pesquisas
-    const phrases = getRandomPhrases();
-    for (const phrase of phrases) {
-        try {
-            console.log(`Pesquisando: ${phrase}`);
+    // const phrases = getRandomPhrases();
+    // for (const phrase of phrases) {
+    //     try {
+    //         console.log(`Pesquisando: ${phrase}`);
 
-            await page.waitForSelector('#sb_form_q', { visible: true });
+    //         await page.waitForSelector('#sb_form_q', { visible: true });
 
-            // Limpa o campo antes de digitar a nova frase
-            await page.evaluate(() => document.querySelector('#sb_form_q').value = "");
+    //         // Limpa o campo antes de digitar a nova frase
+    //         await page.evaluate(() => document.querySelector('#sb_form_q').value = "");
 
-            // Digita a frase no campo de pesquisa
-            await page.type('#sb_form_q', phrase, { delay: 100 });
+    //         // Digita a frase no campo de pesquisa
+    //         await page.type('#sb_form_q', phrase, { delay: 100 });
 
-            // Pressiona Enter para buscar
-            await page.keyboard.press('Enter');
+    //         // Pressiona Enter para buscar
+    //         await page.keyboard.press('Enter');
 
-            // Espera 4 segundos antes da próxima pesquisa
-            await page.waitForTimeout(4000);
-        } catch (e) {
-            console.log('Erro ao digitar a frase:', e);
-        }
-    }
+    //         // Espera 4 segundos antes da próxima pesquisa
+    //         await page.waitForTimeout(4000);
+    //     } catch (e) {
+    //         console.log('Erro ao digitar a frase:', e);
+    //     }
+    // }
     console.log("Pesquisas concluídas!");
 
     // Etapa 3: vai para a página de rewards
