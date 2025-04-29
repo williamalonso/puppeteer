@@ -23,11 +23,12 @@ This project was developed with the bellow techs:
 
 ### ✨ About It's construction:
 
-- 01: We convert a webpage to pdf;
-- 02: We screenshot a webpage;
-- 03: We try to sign in a webpage;
-- 04: We extract data from a page based on a word;
-- 05: We fill a website form with fake data
+- 01: Convert a webpage to pdf;
+- 02: Screenshot a webpage;
+- 03: Try to sign in a webpage;
+- 04: Extract data from a page based on a word;
+- 05: Fill a website form with fake data
+- 06: I automated daily tasks to earn Microsoft Rewards points
 
 ---
 
